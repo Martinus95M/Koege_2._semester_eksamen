@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Rubik', sans-serif;
@@ -9,11 +10,11 @@ body {
 }
 
 header {
-  background: #d9d9d9;
-  color: 000;
+  background: #fff;
+  color: #000;
   padding: 1em 0;
   position: relative;
-  border-bottom: 50px #000;
+  border-bottom: 1px solid #000;
 }
 header::after {
   content: '';
@@ -36,6 +37,7 @@ header .logo span {
   font-weight: 400;
 }
 header .site-nav {
+  z-index: 1000;
   position: absolute;
   top: 100%;
   right: 0;
@@ -49,10 +51,13 @@ header .site-nav ul {
   list-style: none;
 }
 header .site-nav li {
-  border-bottom: 1px solid #575766;
+  border-bottom: 1px solid #f8dcb5;
 }
 header .site-nav li:last-child {
   border-bottom: none;
+}
+header .site-nav li:first-child {
+  border-top: 1px solid #000;
 }
 header .site-nav li a {
   color: #F0F8EA;
@@ -110,32 +115,136 @@ header .open .hamburger::after {
 
 .grid {
   display: grid;
-  grid-template-columns: 20% 2fr 10%;
-  grid-template-rows: 500px 20fr 20fr 20fr;
-  grid-template-areas: ". section-a ." "nyheder . ." "footer footer footer";
+  grid-template-columns: 20% 2fr 20%;
+  grid-template-rows: 3fr 2fr 5fr 5fr 5fr 2fr 3fr;
+  grid-template-areas: "img img img" ". search ." "nyheder section-a ." "nyheder section-b ." ". section-c ." "social social social" "footer footer footer";
+}
+.grid .main-img {
+  grid-area: img;
+}
+.grid .main-img img {
+  width: 100%;
+  height: auto;
+}
+.grid .search-container {
+  grid-area: search;
+  margin-top: 20px;
+}
+.grid .search-container #search-bar {
+  width: 90%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #000;
+  box-shadow: 2px 5px rgba(136, 136, 136, 0.2);
 }
 .grid .section-a {
   grid-area: section-a;
 }
 .grid .section-a h1 {
   margin-bottom: 10px;
+  font-weight: lighter;
 }
 .grid .section-a .circle {
   display: inline-block;
-  margin-bottom: 5%;
+  margin: 5%;
   background: red;
-  width: 100px;
-  height: 100px;
+  min-width: 90px;
+  min-height: auto;
+  width: 10%;
+  height: auto;
   border-radius: 50%;
 }
-.grid .section-a .circle:nth-child(odd) {
-  margin-left: 5%;
+.grid .section-a .circle img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+.grid .section-b {
+  grid-area: section-b;
+}
+.grid .section-b h1 {
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+.grid .section-b .circle {
+  display: inline-block;
+  margin: 5%;
+  background: red;
+  min-width: 90px;
+  min-height: auto;
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+}
+.grid .section-b .circle img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+.grid .section-c {
+  grid-area: section-c;
+}
+.grid .section-c h1 {
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+.grid .section-c .circle {
+  display: inline-block;
+  margin: 5%;
+  background: red;
+  min-width: 90px;
+  min-height: auto;
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+}
+.grid .section-c .circle img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
 }
 .grid .nyheder {
   grid-area: nyheder;
 }
+.grid .social {
+  grid-area: social;
+  display: flex;
+  justify-content: space-around;
+  background: #1dccc3;
+  grid-row-gap: 0px;
+}
+.grid .social div {
+  padding: 2em;
+}
+.grid .social div:hover {
+  background: #f8dcb5;
+}
+.grid .social div i {
+  font-size: 3em;
+  color: #fff;
+}
 .grid footer {
   grid-area: footer;
+  background: #fff;
+  border-top: 1px solid #000;
+  grid-row-gap: 0px;
+}
+.grid footer h3 {
+  padding: .5em;
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.grid footer h3 span {
+  font-weight: 400;
+}
+.grid footer p {
+  padding: .5em;
 }
 
 /*# sourceMappingURL=style.css.map */
