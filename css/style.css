@@ -116,26 +116,31 @@ header .open .hamburger::after {
 .grid {
   display: grid;
   grid-template-columns: 20% 2fr 20%;
-  grid-template-rows: 3fr 2fr 5fr 5fr 5fr 2fr 3fr;
-  grid-template-areas: "img img img" ". search ." "nyheder section-a ." "nyheder section-b ." ". section-c ." "social social social" "footer footer footer";
+  grid-template-rows: 150px .2fr 250px 250px 250px .5fr 1fr;
+  grid-template-areas: "img img img" ". search ." ". section-a ." ". section-b ." ". section-c ." "social social social" "footer footer footer";
 }
 .grid .main-img {
   grid-area: img;
+  margin-bottom: 20px;
 }
 .grid .main-img img {
   width: 100%;
   height: auto;
 }
 .grid .search-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
   grid-area: search;
-  margin-top: 20px;
 }
 .grid .search-container #search-bar {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   border-radius: 25px;
   border: 1px solid #000;
   box-shadow: 2px 5px rgba(136, 136, 136, 0.2);
+  font-weight: bold;
+  color: #000;
 }
 .grid .section-a {
   grid-area: section-a;
@@ -148,7 +153,7 @@ header .open .hamburger::after {
   display: inline-block;
   margin: 5%;
   background: red;
-  min-width: 90px;
+  min-width: 70px;
   min-height: auto;
   width: 10%;
   height: auto;
@@ -171,7 +176,7 @@ header .open .hamburger::after {
   display: inline-block;
   margin: 5%;
   background: red;
-  min-width: 90px;
+  min-width: 70px;
   min-height: auto;
   width: 10%;
   height: auto;
@@ -194,7 +199,7 @@ header .open .hamburger::after {
   display: inline-block;
   margin: 5%;
   background: red;
-  min-width: 90px;
+  min-width: 70px;
   min-height: auto;
   width: 10%;
   height: auto;
@@ -206,8 +211,21 @@ header .open .hamburger::after {
   max-height: 100%;
   border-radius: 50%;
 }
-.grid .nyheder {
-  grid-area: nyheder;
+.grid .sidebar {
+  top: 250px;
+  position: fixed;
+}
+.grid .sidebar .label {
+  padding: 10px;
+  background: #1dccc3;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  -webkit-font-feature-settings: "vkrn", "vpal";
+  font-feature-settings: "vkrn", "vpal";
 }
 .grid .social {
   grid-area: social;
@@ -223,18 +241,16 @@ header .open .hamburger::after {
   background: #f8dcb5;
 }
 .grid .social div i {
-  font-size: 3em;
+  font-size: 2em;
   color: #fff;
 }
 .grid footer {
   grid-area: footer;
   background: #fff;
   border-top: 1px solid #000;
-  grid-row-gap: 0px;
 }
 .grid footer h3 {
   padding: .5em;
-  float: left;
   font-size: 1rem;
   margin: 0;
   text-transform: uppercase;

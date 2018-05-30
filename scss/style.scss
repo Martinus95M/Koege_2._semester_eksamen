@@ -118,18 +118,19 @@ header{
 .grid {
   display: grid;
   grid-template-columns: 20% 2fr 20%;
-  grid-template-rows: 3fr 2fr 5fr 5fr 5fr 2fr 3fr;
+  grid-template-rows: 150px .2fr 250px 250px 250px .5fr 1fr;
   grid-template-areas:
   "img img img"
   ". search ."
-  "nyheder section-a ."
-  "nyheder section-b ."
+  ". section-a ."
+  ". section-b ."
   ". section-c ."
   "social social social"
   "footer footer footer";
 
   .main-img {
     grid-area: img;
+    margin-bottom: 20px;
     img {
       width: 100%;
       height: auto;
@@ -137,15 +138,18 @@ header{
   }
 
   .search-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
     grid-area: search;
-    margin-top: 20px;
     #search-bar {
-      width: 90%;
+      width: 100%;
       padding: 10px;
       border-radius: 25px;
       border: 1px solid #000;
       box-shadow: 2px 5px rgba(136, 136, 136, .2);
-
+      font-weight: bold;
+      color: #000;
     }
   }
 
@@ -159,7 +163,7 @@ header{
       display: inline-block;
       margin: 5%;
       background: red;
-      min-width: 90px;
+      min-width: 70px;
       min-height: auto;
       width: 10%;
       height: auto;
@@ -183,7 +187,7 @@ header{
       display: inline-block;
       margin: 5%;
       background: red;
-      min-width: 90px;
+      min-width: 70px;
       min-height: auto;
       width: 10%;
       height: auto;
@@ -207,7 +211,7 @@ header{
       display: inline-block;
       margin: 5%;
       background: red;
-      min-width: 90px;
+      min-width: 70px;
       min-height: auto;
       width: 10%;
       height: auto;
@@ -220,8 +224,21 @@ header{
       }
     }
   }
-  .nyheder {
-    grid-area: nyheder;
+  .sidebar {
+    top: 250px;
+    position: fixed;
+    .label {
+      padding: 10px;
+      background: #1dccc3;
+      color: #fff;
+      text-transform: uppercase;
+      -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      -webkit-font-feature-settings: "vkrn", "vpal";
+      font-feature-settings: "vkrn", "vpal";
+    }
   }
   .social {
     grid-area: social;
@@ -235,7 +252,7 @@ header{
         background: #f8dcb5;
       }
       i {
-        font-size: 3em;
+        font-size: 2em;
         color: #fff;
       }
     }
@@ -244,10 +261,8 @@ header{
     grid-area: footer;
     background: #fff;
     border-top: 1px solid #000;
-    grid-row-gap: 0px;
     h3 {
       padding: .5em;
-      float: left;
       font-size: 1rem;
       margin: 0;
       text-transform: uppercase;
