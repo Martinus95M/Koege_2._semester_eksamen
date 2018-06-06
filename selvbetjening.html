@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <title>Køge kommune - Borger</title>
-  </head>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110491881-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110491881-1');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+  <title>Køge kommune - Borger</title>
+</head>
   <body>
     <header>
       <div class="container">
-        <a href="#"><h1 class="logo">Køge <div>kommune</div></h1></a>
+        <a href="index.html"><h1 class="logo">Køge <span>kommune</span></h1></a>
 
         <nav class="site-nav">
           <ul>
@@ -20,7 +30,7 @@
             <li><a href="">Erhverv</a></li>
             <li><a href="">Om kommunen</a></li>
             <li><a href="">Byråd og udvalg</a></li>
-            <li><a href="">Kontakt</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </nav>
 
@@ -29,93 +39,130 @@
         </div>
       </div>
     </header>
-    <main class="grid">
+    <main>
 
       <section class="main-img">
-        <img src="http://img.borsen.dk/img/cms/tuksi4/uploads/pictures.picture/9860_picture_3038_1.jpg" alt="stort img">
+        <img src="img/mainimg.jpg" alt="stort img">
       </section>
 
-      <form class="search-container" action="index.html" method="post">
-        <input type="text" id="search-bar" placeholder="Søg">
-      </form>
 
-      <div class="sitemap">
-        <p>Du er her: <span>> </span><a href="index.html">Forside </a> <span>> <a href="selvbetjening.html">Selvbetjening</a></span></p>
-      </div>
-
-      <div class="sidebar">
-        <div class="label">
-          <p>Nyheder</p>
-        </div>
-      </div>
 
       <section id="section-a" class="grid">
+
+        <form id="search-container" action="index.html" method="post">
+          <input type="text" id="search-bar" placeholder="Søg">
+        </form>
+        <div class="sitemap">
+          <p>Du er her: <span>> </span><a href="index.html">Forside </a><span>> <a href="pas.html">Selvbetjening</a></span></p>
+        </div>
+        <div class="sidebar" id="side">
+          <div class="label">
+            <h2>Genveje</h2>
+              <div>
+                <h4>Book tid til:</h4>
+                <p><span><a href="#">></span> Pas</a><p>
+                <p><span><a href="#">></span> Kørerkort</a><p>
+              </div>
+              <div>
+                <h4>Bestil/oplys:</h4>
+                <p class="link"><span><a href="#">></span> Sygesikringskort</a><p>
+                <p class="link"><span><a href="#">></span> Kørekort</a><p>
+                <p class="link"><span><a href="#">></span> Adresseskift</a><p>
+                <p class="link"><span><a href="#">></span> Blåt sygesikringskort</a><p>
+                <p class="link"><span><a href="#">></span> Nem ID</a><p>
+              </div>
+          </div>
+        </div>
+
         <div class="content-wrap">
-          <a href="Selvbetjening.html"><h1>Selvbetjening ></h1></a>
+          <a href="selvbetjening.html"><h1>Selvbetjening ></h1></a>
             <a href="pas.html"><div class="circle">
               <img src="img/pas.png" alt="Pas">
               <div class="layer"></div>
               <p>Pas</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/nemid.jpeg" alt="nemid">
               <div class="layer"></div>
               <p>NemID</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/kørekort.jpg" alt="kørekort">
               <div class="layer"></div>
               <p>Kørekort</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/læge.jpg" alt="læge">
               <div class="layer"></div>
               <p>Valg af læge</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/sygekort.jpg" alt="sygekort">
               <div class="layer"></div>
               <p>Sygesikrings-kort</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/bsygekort.jpg" alt="blåt sygekort">
               <div class="layer"></div>
               <p>Blåt sygesik-ringskort</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/pleje.jpg" alt="pleje">
               <div class="layer"></div>
               <p>Plejehjem</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/skat.jpg" alt="skat">
               <div class="layer"></div>
               <p>Skattekort</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/flyt2.jpg" alt="flyt">
               <div class="layer"></div>
               <p>Flytte</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/boligstøtte.jpg" alt="boligstøtte">
               <div class="layer"></div>
               <p>Boligstøtte</p>
             </div></a>
             <a href="#"><div class="circle">
-              <img src="img/pas.png" alt="Pas">
+              <img src="img/pension.jpg" alt="pension">
               <div class="layer"></div>
               <p>Folkepension</p>
             </div></a>
           </div>
       </section>
 
-      <footer>
-          <h3>Køge <span>kommune</span></h3>
-          <p>Torvet 1, 4600 Køge</p>
-          <p>Tlf. +45 60 12 32 30</p>
-          <p>raadhus@koege.dk</p>
-          <p>CVR nr. 29187625</p>
+      <footer class="grid">
+          <div class="kontakt">
+            <h3>Køge <span>kommune</span></h3>
+            <p>Torvet 1, 4600 Køge</p>
+            <p>Tlf. +45 60 12 32 30</p>
+            <p>raadhus@koege.dk</p>
+            <p>CVR nr. 29187625</p>
+          </div>
+
+          <div class="links">
+            <h3>Oversigt og værktøjer</h3>
+            <div>
+            <p><span><a href="#">> </span>Translate</a></p>
+            <p><span><a href="#">> </span>Sms & mail - service</a></p>
+            <p><span><a href="#">> </span>Kort over kommunen</a></p>
+            <p><span><a href="#">> </span>Gå til min side</a></p>
+            </div>
+            <div>
+            <p><span><a href="#">> </span>Kontakt og åbningstider</a></p>
+            <p><span><a href="#">> </span>Book tid</a></p>
+            <p><span><a href="#">> </span>Job hos os</a></p>
+            <p><span><a href="#">> </span>Selvbetjening</a></p>
+            </div>
+          </div>
+
+          <div class="social">
+            <div><i class="fab fa-instagram"></i></div>
+            <div><i class="fab fa-facebook-square"></i></div>
+          </div>
       </footer>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

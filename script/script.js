@@ -5,6 +5,7 @@ $(document).ready(function(){
 
   $('.site-nav').toggleClass('site-nav--open', 500);
   $(this).toggleClass('open');
+
 });
 
 (function(){
@@ -30,7 +31,7 @@ var modal = (function(){
   $modal.append($content, $close);
 
   $close.on('click', function(e){
-    $('.modal, .modal_overlay').addClass('conceal');
+    $('.modal, .modal_overlay').removeClass('conceal');
     $('.modal, .modal_overlay').removeClass('display');
     $('.open_button').removeClass('load');
     e.preventDefault();
@@ -39,7 +40,7 @@ var modal = (function(){
 
   return {
     center: function(){
-      var top = Math.max($window.height() - $modal.outerHeight(), 0) / 2;
+      var top = Math.max($window.height() - $modal.outerHeight(), 0) / 25;
       var left = Math.max($window.width() - $modal.outerWidth(), 0) / 2;
       $modal.css({
         top: top + $window.scrollTop(),
