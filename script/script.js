@@ -3,7 +3,7 @@ $(document).ready(function(){
    //Dette er en toggle, dette gør at når man klikker på burger-menu icon oppe i højre hjørne vil den "show" eller "hide" efter om den er "show" eller "hide".
    $('.menu-toggle').click(function() {
 
-  $('.site-nav').toggleClass('site-nav--open', 500);
+  $('.site-nav').toggleClass('site-nav--open');
   $(this).toggleClass('open');
 
 });
@@ -18,6 +18,32 @@ $(document).ready(function(){
     $content.addClass('modal_content');
     $('.modal, .modal_overlay').addClass('display');
     $('.open_button').addClass('load');
+  });
+}());
+
+(function(){
+  var $content = $('.modal_info2').detach();
+
+  $('.open_button2').on('click', function(e){
+    modal.open({
+      content: $content,
+    });
+    $content.addClass('modal_content');
+    $('.modal, .modal_overlay').addClass('display');
+    $('.open_button2').addClass('load');
+  });
+}());
+
+(function(){
+  var $content = $('.modal_info3').detach();
+
+  $('.open_button3').on('click', function(e){
+    modal.open({
+      content: $content,
+    });
+    $content.addClass('modal_content');
+    $('.modal, .modal_overlay').addClass('display');
+    $('.open_button3').addClass('load');
   });
 }());
 
@@ -40,7 +66,7 @@ var modal = (function(){
 
   return {
     center: function(){
-      var top = Math.max($window.height() - $modal.outerHeight(), 0) / 25;
+      var top = Math.max($window.height() - $modal.outerHeight(), 0) / 15;
       var left = Math.max($window.width() - $modal.outerWidth(), 0) / 2;
       $modal.css({
         top: top + $window.scrollTop(),
@@ -65,4 +91,7 @@ var modal = (function(){
     }
   };
 }());
+
+
+
 });
