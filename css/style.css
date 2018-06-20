@@ -505,6 +505,9 @@ main #section-c .content-wrap #wrap div .tid {
   font-weight: bold;
   text-decoration: underline;
 }
+.modal_info p a:hover, .modal_info2 p a:hover, .modal_info3 p a:hover {
+  text-decoration-color: #1dccc3;
+}
 .modal_info li, .modal_info2 li, .modal_info3 li {
   text-align: left;
   color: #000;
@@ -690,7 +693,7 @@ footer .social div i {
 @media screen and (min-width: 750px) {
   .grid {
     display: grid;
-    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-columns: 20% 35% 35% 10%;
     grid-template-areas: '. search search .' '. map map .' '. img img .' 'sidebar content content .';
   }
 
@@ -851,7 +854,7 @@ footer .social div i {
     color: #000;
   }
   main #section-a .content-wrap a .circle p {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   main #section-a .content-wrap a .circle-last {
     margin-right: 5%;
@@ -870,7 +873,7 @@ footer .social div i {
     color: white;
   }
   main #section-a .content-wrap a .circle-last p {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   main #section-b {
     grid-area: content;
@@ -954,7 +957,7 @@ footer .social div i {
     grid-area: sidebar;
     display: block;
     position: sticky;
-    width: 100%;
+    width: 80%;
     height: 720px;
     box-shadow: 2px 5px rgba(136, 136, 136, 0.2);
   }

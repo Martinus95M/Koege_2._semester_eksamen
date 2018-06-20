@@ -490,6 +490,9 @@ main {
       color: #000;
       font-weight: bold;
       text-decoration: underline;
+      &:hover {
+        text-decoration-color: #1dccc3;
+      }
     }
   }
   li {
@@ -685,7 +688,7 @@ button.modal_close span:after {
 
   .grid {
     display: grid;
-    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-columns: 20% 35% 35% 10%;
     grid-template-areas:
       '. search search .'
       '. map map .'
@@ -856,7 +859,7 @@ button.modal_close span:after {
               color: #000;
             }
             p {
-              font-size: 1.5em;
+              font-size: 1.3em;
             }
           }
 
@@ -876,7 +879,7 @@ button.modal_close span:after {
               }
             }
             p {
-              font-size: 1.5em;
+              font-size: 1.3em;
             }
           }
         }
@@ -973,7 +976,7 @@ button.modal_close span:after {
       grid-area: sidebar;
       display: block;
       position: sticky;
-      width: 100%;
+      width: 80%;
       height: 720px;
       box-shadow: 2px 5px rgba(136, 136, 136, .2);
       .label {
