@@ -10,8 +10,20 @@ body {
   background: #F5FAF9;
 }
 
-body::-webkit-scrollbar {
-  width: 0;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1dccc3;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5dd8d0;
 }
 
 header {
@@ -673,6 +685,12 @@ footer .kontakt h3 span::before, footer .kontakt h3 span::after {
 footer .kontakt p {
   padding: .2em;
 }
+footer .kontakt a {
+  color: #000;
+}
+footer .kontakt a:hover {
+  text-decoration-color: #1dccc3;
+}
 footer .links {
   display: none;
 }
@@ -898,33 +916,11 @@ footer .social div i {
   main footer .links {
     display: none;
   }
-  main footer .links h3 {
-    padding: .2em;
-    font-size: 1rem;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  main footer .links div {
-    display: inline-block;
-  }
-  main footer .links div p {
-    padding: .2em;
-  }
-  main footer .links div p a {
-    color: #000;
-    text-decoration: none;
-  }
-  main footer .links div p span {
-    font-weight: bold;
-  }
-  main footer .links div p span::before, main footer .links div p span::after {
-    display: none;
-  }
   main footer .social {
     grid-column: 4/5;
-    margin-top: 50%;
-    text-align: right;
+    display: block;
+    margin-top: 100%;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1050px) {

@@ -9,9 +9,22 @@ body {
   background: #F5FAF9;
 }
 
-body::-webkit-scrollbar {
-  width: 0;
+::-webkit-scrollbar {
+    width: 10px;
 }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1dccc3;
+    border-radius: 15px;
+    &:hover {
+      background-color: #5dd8d0;
+    }
+}
+
 
 //Navigation menu start
 header {
@@ -664,6 +677,12 @@ button.modal_close span:after {
       p {
         padding: .2em;
       }
+      a {
+        color: #000;
+        &:hover {
+          text-decoration-color: #1dccc3;
+        }
+      }
     }
     .links {
       display: none;
@@ -916,34 +935,12 @@ button.modal_close span:after {
         }
         .links {
           display: none;
-          h3 {
-            padding: .2em;
-            font-size: 1rem;
-            margin: 0;
-            text-transform: uppercase;
-            font-weight: 700;
-          }
-          div {
-            display: inline-block;
-            p {
-              padding: .2em;
-              a {
-                color: #000;
-                text-decoration: none;
-              }
-              span {
-                font-weight: bold;
-                &::before, &::after{
-                  display: none;
-                }
-              }
-            }
-          }
         }
         .social {
           grid-column: 4/5;
-          margin-top: 50%;
-          text-align: right;
+          display: block;
+          margin-top: 100%;
+          padding: 0;
         }
       }
     }
