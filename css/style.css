@@ -1279,7 +1279,7 @@ footer .social div i {
   }
   main footer .social {
     grid-column: 4/5;
-    margin-top: 50%;
+    margin-top: 40%;
     text-align: right;
   }
 }
